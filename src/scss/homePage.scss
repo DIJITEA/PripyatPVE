@@ -1,0 +1,53 @@
+@import "default_variables.scss";
+
+
+
+.home-page {
+  font-family: $defaultFontFamily;
+  color: $dijitRed;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    // background-image: url("../assets/img/backgrounds/backG.jpg");
+    overflow: hidden;
+    background-size: cover;
+  }
+  &__content-container {
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.699);
+//ПОКА ХЗ
+    // opacity: 0;
+  }
+
+  &__name-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    max-width: 526px;
+  }
+
+  &__h1 {
+    font-size: 14em;
+    font-weight: 1000;
+  }
+
+  &__h2 {
+    font-size: 5.5em;
+    font-weight: 800;
+  }
+  &__p {
+    margin-left: 15px;
+  }
+}
+
+.Video{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  z-index: -1;
+}

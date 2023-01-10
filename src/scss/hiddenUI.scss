@@ -1,0 +1,33 @@
+@import "default_variables.scss";
+
+.hiddenUI{
+    position: relative;
+    height: 100%;
+    &__button{
+        height: 100%;
+    }
+    &__h2{
+        font-size: $h2FontSize;
+        font-weight: $h2FontWeight;
+    }
+    &__list-container{
+        position: absolute;
+        display: flex;
+        align-items: center;
+
+        flex-wrap: wrap;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    &__list-container--open{
+        max-height: 200px;
+        // height: 90px;
+    }
+    &__list{
+        margin: 5px;
+        width: 100%;
+    }
+}

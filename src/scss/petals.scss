@@ -1,0 +1,65 @@
+.petals {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &__petal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 7px;
+        background-image: url('../assets/img/backgrounds/petal.png');
+        animation-iteration-count: infinite;
+    }
+
+    @for $i from 1 through 250 {
+        &__petal:nth-child(#{$i}) {
+            bottom: random($limit: 1000) - 500 + px;
+            left: random($limit: 3000) - 3000 + px;
+            $randomPoint: random($limit: 100) + px;
+            animation-duration: random($limit: 80) + 20s, random($limit: 20) + s, random($limit: 20) + s;
+            animation-name: petalDrop, petalrotateX, petalrotateY;
+        }
+    }
+}
+
+@keyframes petalDrop {
+    from {
+        top: random($limit: 10)-20;
+        left: random($limit: 10)-20;
+        opacity: 1;
+
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    to {
+        top: 100%;
+        left: 70%;
+        opacity: 0;
+    }
+}
+
+@keyframes petalrotateX {
+
+    to {
+        transform: rotateX(180deg);
+    }
+}
+
+@keyframes petalrotateY {
+
+    to {
+        transform: rotatey(180deg);
+    }
+}
