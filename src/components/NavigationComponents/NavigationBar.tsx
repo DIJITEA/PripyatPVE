@@ -10,23 +10,25 @@ import { HiddenUlInputArary } from '../../models/models';
 import HiddenUl from './HiddenUl'
 //--------------------------------
 function NavigationBar() {
+    console.log(typeof(logo))
+    console.log(logo)
     //-----
     const lang = useAppSelector(state => state.lang.value)
     const dispatch = useAppDispatch()
     //-----
-    let JSON_Text = require( `../../textData/siteTextData${lang}.json`)
-    const azaza = JSON_Text.NavigationBar
-    console.log(JSON_Text)
+    const JSON_Text = require( `../../textData/siteTextData${lang}.json`)
+    const JSON_Text_NavigationBar = JSON_Text.NavigationBar
+    // console.log(JSON_Text)
     const HiddenUlinputObj: HiddenUlInputArary = {
-        mainName: JSON_Text.NavigationBar.h2_screenshots,
+        mainName: JSON_Text_NavigationBar.h2_screenshots,
         value: [
             {
-                name: 'Sites',
-                href: '/sites'
+                name: JSON_Text_NavigationBar.name_sites,
+                src: '/sites'
             },
             {
-                name: 'Photos',
-                href: '/photos'
+                name: JSON_Text_NavigationBar.name_photos,
+                src: '/photos'
             }
         ]
     }
@@ -38,7 +40,7 @@ function NavigationBar() {
                 <ul className='navigation-bar__ul'>
                     <li className='navigation-bar__li'>
                         <a className='navigation-bar__a' href="/#/about">
-                            <h2 className='navigation-bar__h2'>{JSON_Text.NavigationBar.h2_about}</h2>
+                            <h2 className='navigation-bar__h2'>{JSON_Text_NavigationBar.h2_about}</h2>
                         </a>
                     </li>
                     <li className='navigation-bar__li'>
@@ -46,7 +48,7 @@ function NavigationBar() {
                     </li>
                     <li className='navigation-bar__li'>
                         <a className='navigation-bar__a' href='/Contact'>
-                            <h2 className='navigation-bar__h2'>{azaza.h2_contacts}</h2>
+                            <h2 className='navigation-bar__h2'>{JSON_Text_NavigationBar.h2_contacts}</h2>
                         </a>
                     </li>
                 </ul>

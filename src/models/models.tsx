@@ -1,8 +1,12 @@
 export interface HiddenUlInputArary {
-    mainName:string,
-    value:Array<HiddenUlInput>
+  mainName: string;
+  value: Array<HiddenUlInput>;
 }
-interface HiddenUlInput
-    {name: string,
-    href: string}
+interface HiddenUlInput {
+  name: string;
+  src: string;
+}
 
+export interface CaruselObj{
+  value: Array<string>
+}

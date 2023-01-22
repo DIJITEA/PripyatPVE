@@ -11,13 +11,13 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    // background-image: url("../assets/img/backgrounds/backG.jpg");
+    background-image: url("../assets/img/backgrounds/backG2.jpg");
     overflow: hidden;
     background-size: cover;
   }
   &__content-container {
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.699);
+    background-color: $defaultBGColor
 //ПОКА ХЗ
     // opacity: 0;
   }

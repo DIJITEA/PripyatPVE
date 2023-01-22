@@ -4,14 +4,14 @@ module.exports = {
   mode: "development",
   entry: "./src/index.tsx", 
   output: {
-    path: path.resolve(__dirname, "./dist"), 
-    publicPath: "./dist/",
+    path: path.resolve(__dirname, "/dist"), 
+    publicPath: "/dist/",
     filename: "bundle.js", 
   },
   devServer: {
     historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, "./"),
+      directory: path.join(__dirname, "/"),
     },
     port: 8081,
     open: true,

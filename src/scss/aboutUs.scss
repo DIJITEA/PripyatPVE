@@ -1,0 +1,25 @@
+@import "default_variables.scss";
+.aboutUs {
+  font-family: $defaultFontFamily;
+  color: $dijitRed;
+
+  // background-color: aqua;
+  &__container {
+    position: relative;
+    // width: 100vw;
+    height: 100vh;
+  }
+  &__h2 {
+    font-size: $h2FontSize;
+    font-weight: $h2FontWeight;
+    background-color: $defaultBGColor;
+  }
+  &__h3 {
+    font-size: $h3FontSize;
+
+    background-color: $defaultBGColor;
+  }
+  &__p {
+    background-color: $defaultBGColor;
+  }
+}

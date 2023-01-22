@@ -1,7 +1,9 @@
 // fonts var
 $defaultFontFamily: GP;
-$h2FontSize: 30px;
+$h2FontSize: 40px;
 $h2FontWeight: 500;
+$h3FontSize: 20px;
+$h3FontWeight: 300;
 
 //colors
 
@@ -15,3 +17,5 @@ $LampColor: radial-gradient(
     rgba(255, 255, 255, 0.463) 35%,
     rgba(252, 252, 252, 0) 100%
   );
+
+$defaultBGColor: rgba(255, 255, 255, 0.699);
