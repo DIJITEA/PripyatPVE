@@ -1,10 +1,8 @@
 @import "default_variables.scss";
 
-
-
 .home-page {
   font-family: $defaultFontFamily;
-  color: $dijitRed;
+  color: white;
 
   &__container {
     display: flex;
@@ -14,11 +12,16 @@
     background-image: url("../assets/img/backgrounds/backG2.jpg");
     overflow: hidden;
     background-size: cover;
+    background-position: center;
   }
   &__content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     backdrop-filter: blur(2px);
-    background-color: $defaultBGColor
-//ПОКА ХЗ
+    background-color: #1a1a1a;
+    // width: 100%;
+    //ПОКА ХЗ
     // opacity: 0;
   }
 
@@ -27,26 +30,28 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-end;
-    max-width: 526px;
+    // max-width: 526px;
+    // padding: 5px;
   }
 
   &__h1 {
     font-size: 14em;
-    font-weight: 1000;
+    // font-weight: 1000;
   }
 
   &__h2 {
-    font-size: 5.5em;
-    font-weight: 800;
+    font-size: 90px;
+    font-weight: 400;
+    margin: 15px;
   }
   &__p {
     margin-left: 15px;
   }
 }
 
-.Video{
+.Video {
   position: absolute;
-  top:0px;
+  top: 0px;
   left: 0px;
   width: 100%;
   z-index: -1;

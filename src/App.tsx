@@ -13,7 +13,7 @@ export default function App() {
   return (
     <div className="main">
       <NavigationBar />
-      <LanguageButton />
+      {/* <LanguageButton /> */}
       <Homepage />
       <JoinDiscord />
       <AboutUs />

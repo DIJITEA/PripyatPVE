@@ -8,6 +8,7 @@ import logo from '../../assets/img/logo/logo-3.jpg'
 import { HiddenUlInputArary } from '../../models/models';
 //components
 import HiddenUl from './HiddenUl'
+import LanguageButton from './languageButton';
 //--------------------------------
 function NavigationBar() {
     console.log(typeof(logo))
@@ -50,6 +51,9 @@ function NavigationBar() {
                         <a className='navigation-bar__a' href='/Contact'>
                             <h2 className='navigation-bar__h2'>{JSON_Text_NavigationBar.h2_contacts}</h2>
                         </a>
+                    </li>
+                    <li className='navigation-bar__li'>
+                    <LanguageButton />
                     </li>
                 </ul>
             </div>

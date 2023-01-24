@@ -7,19 +7,35 @@
   &__container {
     position: relative;
     // width: 100vw;
-    height: 100vh;
+    // height: 100vh;
+  }
+  &__info-container {
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: center;
+    // align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    // height: 200px;
+    background-color: $defaultBGColor;
+    backdrop-filter: blur(2px);
+
+    &--second{
+      // position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
   }
   &__h2 {
-    font-size: $h2FontSize;
+    font-size: 5em;
     font-weight: $h2FontWeight;
-    background-color: $defaultBGColor;
   }
   &__h3 {
-    font-size: $h3FontSize;
+    font-size: 3em;
 
-    background-color: $defaultBGColor;
+    // font-size: $h3FontSize;
   }
   &__p {
-    background-color: $defaultBGColor;
+    font-size: 1.5em;
   }
 }

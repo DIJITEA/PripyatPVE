@@ -2,14 +2,17 @@
 
 .navigation-bar {
     // background: linear-gradient(90deg, rgb(255, 255, 255)50%,rgb(215, 229, 13) 50%);
-    position: absolute;
+    position: fixed;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #1a1a1a;
+    color: aliceblue;
     backdrop-filter: blur(1px);
+    z-index: 3;
 
     // background-image: url('../assets/img/backgrounds/MainPageBGNoPrintWB.png');
     &__h2{
         font-size: 1em;
+        color: aliceblue;
     }
     &__work-space {
         margin: 0 auto;

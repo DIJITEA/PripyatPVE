@@ -9,17 +9,17 @@ function CarouselItem(Component: {
   itemI: number;
   currentItemI: number;
 }) {
-  const brr = (itemI: number, currentItemI: number) => {
-    let L: string;
+  const classReturn = (itemI: number, currentItemI: number) => {
+    let classSet: string;
     if (itemI == currentItemI) {
-      L = "carousel__img-container carousel__img-container--active";
+      classSet = "carousel__img-container carousel__img-container--active";
     } else {
-      L = "carousel__img-container";
+      classSet = "carousel__img-container";
     }
-    return L;
+    return classSet;
   };
   return (
-    <div className={brr(Component.itemI, Component.currentItemI)}>
+    <div className={classReturn(Component.itemI, Component.currentItemI)}>
       <img className="carousel__img" src={Component.imgSrc} />
     </div>
   );
