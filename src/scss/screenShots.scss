@@ -1,0 +1,126 @@
+@import "default_variables.scss";
+
+$screenShootsMaxWidth: 1200px;
+
+.fullScreenImg {
+  // display: none;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:0px;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  z-index: -1;
+  &--active{
+    opacity: 1;
+    z-index: 3;
+  }
+
+  &__content-box {
+    position: relative;
+    height: 95vh;
+    border: 5px solid white;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: $dijitRed;
+    clip-path: polygon(
+      20% 0%,
+      0% 20%,
+      30% 50%,
+      0% 80%,
+      20% 100%,
+      50% 70%,
+      80% 100%,
+      100% 80%,
+      70% 50%,
+      100% 20%,
+      80% 0%,
+      50% 30%
+    );
+  }
+}
+
+.screenShots {
+  display: flex;
+  justify-content: center;
+  background-color: $dijitRed;
+  height: 100vh;
+  &__content-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 120px;
+    width: 50%;
+    // background-color: aliceblue;
+  }
+}
+.currentImg {
+  &__content-box {
+    position: relative;
+  }
+
+  &__img {
+    max-width: $screenShootsMaxWidth;
+    width: 100%;
+    opacity: 1;
+    // opacity: 0;
+
+    &--prev {
+      position: absolute;
+      // width: 50%;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+    }
+    &--cur {
+      position: relative;
+      // transition: opacity 1s;
+      // opacity: 1;
+      z-index: 2;
+      animation: rollout 2.4s;
+    }
+  }
+}
+@keyframes rollout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.imgGallery {
+  &__content-box {
+    margin: 5px 0px 25px 0px;
+    max-width: $screenShootsMaxWidth;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: scroll;
+  }
+  &__content-box::-webkit-scrollbar {
+    display: none;
+  }
+  &__img {
+    margin: 3px;
+    max-width: 30%;
+  }
+}

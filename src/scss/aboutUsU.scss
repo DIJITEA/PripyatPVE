@@ -1,0 +1,41 @@
+@import "default_variables.scss";
+.aboutUs {
+  font-family: $defaultFontFamily;
+  color: $dijitRed;
+
+  // background-color: aqua;
+  &__container {
+    position: relative;
+    // width: 100vw;
+    // height: 100vh;
+  }
+  &__info-container {
+    // display: flex;
+    // flex-wrap: nowrap;
+    // justify-content: center;
+    // align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    // height: 200px;
+    background-color: $defaultBGColor;
+    backdrop-filter: blur(2px);
+
+    &--second{
+      // position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+  &__h2 {
+    font-size: 5em;
+    font-weight: $h2FontWeight;
+  }
+  &__h3 {
+    font-size: 3em;
+
+    // font-size: $h3FontSize;
+  }
+  &__p {
+    font-size: 1.5em;
+  }
+}
