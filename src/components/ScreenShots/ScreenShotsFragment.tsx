@@ -32,7 +32,6 @@ function ScreenShotsFragment() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(currentChangeRigths);
       if (currentChangeRigths) {
         currentImgkey == 0
           ? setCurrentImgKeyState(1)
