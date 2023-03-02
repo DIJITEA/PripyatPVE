@@ -21,13 +21,11 @@ $screenShootsMaxWidth: 1200px;
 
   &__content-box {
     position: relative;
-    height: 95vh;
+
     border: 5px solid white;
   }
 
-  &__img {
-    height: 100%;
-  }
+
 
   &__button {
     position: absolute;
@@ -65,6 +63,7 @@ $screenShootsMaxWidth: 1200px;
     flex-direction: column;
     margin-top: 120px;
     width: 50%;
+    // height: 50%;
     // background-color: aliceblue;
   }
 }
@@ -122,5 +121,39 @@ $screenShootsMaxWidth: 1200px;
   &__img {
     margin: 3px;
     max-width: 30%;
+  }
+}
+
+@media (orientation: portrait){
+  .screenShots{
+    &__content-box{
+      width: 90%;
+    }
+  }
+  .fullScreenImg{
+    &__content-box{
+      width: 98vw;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
+}
+@media (orientation: landscape){
+  .fullScreenImg{
+    &__content-box{
+      height: 95vh;
+    }
+    &__img {
+      height: 100%;
+    }
+  }
+}
+@media (max-height: 790px) {
+  .screenShots{
+    &__content-box{
+      flex-direction: row;
+      width: 95%;
+    }
   }
 }
