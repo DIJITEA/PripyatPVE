@@ -38,7 +38,7 @@ function NavigationBar() {
         <img className="navigation-bar__logo" src={logo}></img>
         <ul className="navigation-bar__ul">
           <li className="navigation-bar__li">
-            <a className="navigation-bar__a" href="/#/about">
+            <a className="navigation-bar__a" href="#/about">
               <h2 className="navigation-bar__h2">
                 {JSON_Text_NavigationBar.h2_about}
               </h2>
@@ -53,7 +53,14 @@ function NavigationBar() {
           <li className="navigation-bar__li">
             <a className="navigation-bar__a" href="/Contact">
               <h2 className="navigation-bar__h2">
-                {JSON_Text_NavigationBar.h2_contacts}
+              {JSON_Text_NavigationBar.h2_wiki}
+              </h2>
+            </a>
+          </li>
+          <li className="navigation-bar__li">
+            <a className="navigation-bar__a" href="/Contact">
+              <h2 className="navigation-bar__h2">
+              {JSON_Text_NavigationBar.h2_donate}
               </h2>
             </a>
           </li>
