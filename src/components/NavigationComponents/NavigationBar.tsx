@@ -52,7 +52,7 @@ function NavigationBar() {
               </h2>
           </li>
           <li className="navigation-bar__li">
-            <a className="navigation-bar__a" href="../../../Wiki/home.html">
+            <a className="navigation-bar__a" href="./Wiki/home.html">
               <h2 className="navigation-bar__h2">
               {JSON_Text_NavigationBar.h2_wiki}
               </h2>
